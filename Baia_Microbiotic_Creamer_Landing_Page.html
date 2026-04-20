@@ -1,0 +1,2240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liposomal Vitamin C | Revitalize Wellness</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-green: #1a7a4c;
+            --dark-green: #145c3a;
+            --light-green: #e8f5e9;
+            --accent-green: #4caf50;
+            --bg-cream: #faf9f7;
+            --bg-light: #f5f5f5;
+            --text-dark: #1a1a1a;
+            --text-gray: #666666;
+            --text-light: #999999;
+            --border-color: #e0e0e0;
+            --white: #ffffff;
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
+            --shadow-md: 0 4px 20px rgba(0,0,0,0.12);
+            --shadow-lg: 0 8px 40px rgba(0,0,0,0.15);
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 20px;
+            --radius-xl: 30px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-cream);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* Top Banner */
+        .top-banner {
+            background: var(--primary-green);
+            color: var(--white);
+            text-align: center;
+            padding: 10px 20px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .top-banner span {
+            margin: 0 8px;
+        }
+
+        /* Header */
+        .header {
+            background: var(--white);
+            padding: 15px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--text-dark);
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--primary-green);
+        }
+
+        .nav {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .nav a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 15px;
+            transition: color 0.2s;
+        }
+
+        .nav a:hover {
+            color: var(--primary-green);
+        }
+
+        .header-icons {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .cart-btn {
+            background: var(--primary-green);
+            color: var(--white);
+            padding: 10px 20px;
+            border-radius: var(--radius-xl);
+            font-weight: 600;
+            font-size: 14px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Main Product Section */
+        .product-section {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 40px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        /* Product Gallery */
+        .product-gallery {
+            position: sticky;
+            top: 100px;
+        }
+
+        .main-image {
+            width: 100%;
+            aspect-ratio: 1;
+            background: linear-gradient(135deg, #f8f6f3 0%, #efe9e1 100%);
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .main-image::before {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(26,122,76,0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .product-placeholder {
+            width: 280px;
+            height: 350px;
+            background: linear-gradient(180deg, #e8f5e9 0%, #1a7a4c 60%, #145c3a 100%);
+            border-radius: 20px;
+            position: relative;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .product-placeholder::before {
+            content: 'LIPOSOMAL VITAMIN C';
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            font-weight: 700;
+            font-size: 14px;
+            text-align: center;
+            width: 80%;
+        }
+
+        .product-placeholder::after {
+            content: 'Revitalize Wellness';
+            position: absolute;
+            top: 42%;
+            left: 50%;
+            transform: translateX(-50%);
+            color: rgba(255,255,255,0.8);
+            font-size: 12px;
+            white-space: nowrap;
+        }
+
+        .thumbnail-row {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+        }
+
+        .thumbnail {
+            width: 70px;
+            height: 70px;
+            background: var(--bg-light);
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            color: var(--text-light);
+        }
+
+        .thumbnail:hover, .thumbnail.active {
+            border-color: var(--primary-green);
+        }
+
+        /* Product Info */
+        .product-info {
+            padding-top: 20px;
+        }
+
+        .star-rating {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+
+        .stars {
+            color: #f5a623;
+            font-size: 18px;
+            letter-spacing: 2px;
+        }
+
+        .rating-text {
+            font-size: 14px;
+            color: var(--text-gray);
+        }
+
+        .product-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+
+        .product-tagline {
+            font-size: 18px;
+            color: var(--text-gray);
+            margin-bottom: 25px;
+            font-weight: 500;
+        }
+
+        .benefits-list {
+            margin-bottom: 30px;
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .benefit-check {
+            color: var(--primary-green);
+            font-weight: 700;
+        }
+
+        .product-description {
+            background: var(--light-green);
+            padding: 20px;
+            border-radius: var(--radius-md);
+            margin-bottom: 30px;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        .hero-review {
+            background: var(--bg-cream);
+            border-left: 4px solid var(--primary-green);
+            padding: 16px 20px;
+            border-radius: 0 var(--radius-md) var(--radius-md) 0;
+            margin-bottom: 30px;
+            font-size: 14px;
+            font-style: italic;
+            color: var(--text-gray);
+            line-height: 1.7;
+        }
+
+        .hero-review cite {
+            display: block;
+            margin-top: 8px;
+            font-style: normal;
+            font-weight: 600;
+            color: var(--text-dark);
+            font-size: 13px;
+        }
+
+        /* Size Selector */
+        .size-section {
+            margin-bottom: 30px;
+        }
+
+        .size-label {
+            font-weight: 600;
+            margin-bottom: 12px;
+            font-size: 14px;
+        }
+
+        .size-options {
+            display: flex;
+            gap: 12px;
+        }
+
+        .size-option {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+            padding: 12px 20px;
+            border: 2px solid var(--border-color);
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            transition: all 0.2s;
+            min-width: 110px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .size-option:hover {
+            border-color: var(--primary-green);
+        }
+
+        .size-option.active {
+            border-color: var(--primary-green);
+            background: var(--light-green);
+        }
+
+        /* Price Section */
+        .price-section {
+            margin-bottom: 30px;
+        }
+
+        .price-main {
+            display: flex;
+            align-items: baseline;
+            gap: 15px;
+            margin-bottom: 8px;
+        }
+
+        .price-current {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+
+        .price-info {
+            color: var(--text-gray);
+            font-size: 14px;
+        }
+
+        .price-per-dose {
+            background: var(--bg-light);
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: var(--radius-sm);
+            font-size: 13px;
+            margin-bottom: 20px;
+        }
+
+        /* Bundle Options */
+        .bundle-options {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 25px;
+        }
+
+        .bundle-option {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 20px;
+            border: 2px solid var(--border-color);
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .bundle-option:hover {
+            border-color: var(--primary-green);
+        }
+
+        .bundle-option.active {
+            border-color: var(--primary-green);
+            background: var(--light-green);
+        }
+
+        .bundle-option.bestseller {
+            position: relative;
+        }
+
+        .bestseller-badge {
+            position: absolute;
+            top: -10px;
+            right: 20px;
+            background: var(--primary-green);
+            color: var(--white);
+            padding: 4px 12px;
+            border-radius: var(--radius-sm);
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        .bundle-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .bundle-radio {
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--border-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .bundle-option.active .bundle-radio {
+            border-color: var(--primary-green);
+        }
+
+        .bundle-option.active .bundle-radio::after {
+            content: '';
+            width: 10px;
+            height: 10px;
+            background: var(--primary-green);
+            border-radius: 50%;
+        }
+
+        .bundle-label {
+            font-weight: 600;
+            font-size: 15px;
+        }
+
+        .bundle-desc {
+            font-size: 12px;
+            color: var(--text-gray);
+            margin-top: 2px;
+        }
+
+        .bundle-right {
+            text-align: right;
+        }
+
+        .bundle-price {
+            font-weight: 700;
+            font-size: 16px;
+        }
+
+        .bundle-original {
+            color: var(--text-light);
+            text-decoration: line-through;
+            font-size: 13px;
+        }
+
+        .bundle-discount {
+            color: var(--primary-green);
+            font-weight: 600;
+            font-size: 13px;
+        }
+
+        /* Add to Cart Button */
+        .add-to-cart {
+            width: 100%;
+            padding: 18px;
+            background: var(--primary-green);
+            color: var(--white);
+            border: none;
+            border-radius: var(--radius-xl);
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-bottom: 15px;
+        }
+
+        .add-to-cart:hover {
+            background: var(--dark-green);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .shipping-info {
+            text-align: center;
+            font-size: 13px;
+            color: var(--text-gray);
+            margin-bottom: 20px;
+        }
+
+        .product-meta {
+            text-align: center;
+            font-size: 13px;
+            color: var(--text-gray);
+        }
+
+        /* Accordion Sections */
+        .accordion-section {
+            border-top: 1px solid var(--border-color);
+            margin-top: 30px;
+        }
+
+        .accordion-item {
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .accordion-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 0;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        .accordion-header:hover {
+            color: var(--primary-green);
+        }
+
+        .accordion-icon {
+            font-size: 24px;
+            color: var(--primary-green);
+            transition: transform 0.3s;
+        }
+
+        .accordion-item.open .accordion-icon {
+            transform: rotate(45deg);
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+
+        .accordion-item.open .accordion-content {
+            max-height: 1000px;
+        }
+
+        .accordion-inner {
+            padding-bottom: 20px;
+            font-size: 14px;
+            line-height: 1.8;
+            color: var(--text-gray);
+        }
+
+        .accordion-inner ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .accordion-inner li {
+            padding: 6px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .accordion-inner li::before {
+            content: '•';
+            position: absolute;
+            left: 8px;
+            color: var(--primary-green);
+        }
+
+        /* Attributes Strip */
+        .attributes-strip {
+            background: var(--white);
+            padding: 30px 40px;
+            margin-top: 60px;
+            overflow: hidden;
+        }
+
+        .attributes-scroll {
+            display: flex;
+            gap: 40px;
+            animation: scroll 20s linear infinite;
+        }
+
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .attribute-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            white-space: nowrap;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .attribute-icon {
+            width: 24px;
+            height: 24px;
+            background: var(--light-green);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-green);
+            font-size: 12px;
+        }
+
+        /* Endorsement / Review Section */
+        .endorsement-section {
+            background: var(--white);
+            padding: 60px 40px;
+            text-align: center;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .section-subtitle {
+            color: var(--text-gray);
+            font-size: 18px;
+            margin-bottom: 40px;
+        }
+
+        .reviews-grid {
+            max-width: 900px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .review-card {
+            background: var(--bg-cream);
+            border-radius: var(--radius-lg);
+            padding: 28px;
+            text-align: left;
+        }
+
+        .review-stars {
+            color: #f5a623;
+            font-size: 16px;
+            margin-bottom: 12px;
+        }
+
+        .review-text {
+            font-size: 14px;
+            color: var(--text-gray);
+            line-height: 1.7;
+            font-style: italic;
+            margin-bottom: 16px;
+        }
+
+        .review-author {
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        /* Results Section */
+        .results-section {
+            background: var(--primary-green);
+            padding: 60px 40px;
+            color: var(--white);
+        }
+
+        .results-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .results-grid {
+            max-width: 800px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .result-card {
+            text-align: center;
+        }
+
+        .result-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+
+        .result-number {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .result-text {
+            font-size: 16px;
+            opacity: 0.9;
+            line-height: 1.5;
+        }
+
+        .results-note {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 13px;
+            opacity: 0.8;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Bundle Upsell Section (replaces Microbiokit) */
+        .bundle-upsell-section {
+            padding: 80px 40px;
+            background: linear-gradient(180deg, var(--bg-cream) 0%, var(--white) 100%);
+        }
+
+        .bundle-upsell-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .bundle-upsell-image {
+            aspect-ratio: 1;
+            background: linear-gradient(135deg, #f8f6f3 0%, #efe9e1 100%);
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .bundle-kit-placeholder {
+            width: 200px;
+            height: 250px;
+            background: var(--primary-green);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
+
+        .bundle-upsell-info h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        .bundle-upsell-info p {
+            color: var(--text-gray);
+            font-size: 15px;
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+
+        .bundle-upsell-discount {
+            display: inline-block;
+            background: #ff4757;
+            color: white;
+            padding: 6px 16px;
+            border-radius: var(--radius-xl);
+            font-weight: 700;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .bundle-upsell-list {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 30px;
+        }
+
+        .bundle-upsell-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border-color);
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .bundle-upsell-list li:last-child {
+            border-bottom: none;
+        }
+
+        .bundle-upsell-list .check-green {
+            color: var(--primary-green);
+            font-weight: 700;
+        }
+
+        .kit-cta {
+            display: block;
+            width: 100%;
+            padding: 18px;
+            background: var(--primary-green);
+            color: var(--white);
+            border: none;
+            border-radius: var(--radius-xl);
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .kit-cta:hover {
+            background: var(--dark-green);
+            transform: translateY(-2px);
+        }
+
+        .kit-note {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 13px;
+            color: var(--text-gray);
+        }
+
+        /* How to Take Section */
+        .howto-section {
+            padding: 80px 40px;
+            background: var(--white);
+        }
+
+        .howto-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .howto-grid {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+
+        .howto-item {
+            text-align: center;
+        }
+
+        .howto-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--light-green);
+            border-radius: 50%;
+            margin: 0 auto 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+        }
+
+        .howto-item h4 {
+            font-weight: 700;
+            margin-bottom: 6px;
+            font-size: 15px;
+        }
+
+        .howto-item p {
+            font-size: 13px;
+            color: var(--text-gray);
+        }
+
+        /* Comparison Section */
+        .comparison-section {
+            padding: 80px 40px;
+            background: var(--bg-cream);
+        }
+
+        .comparison-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .comparison-table {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .comparison-row {
+            display: grid;
+            grid-template-columns: 2fr 1.5fr 1.5fr 1.5fr;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .comparison-row:last-child {
+            border-bottom: none;
+        }
+
+        .comparison-cell {
+            padding: 16px 20px;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .comparison-cell:first-child {
+            justify-content: flex-start;
+            font-weight: 500;
+        }
+
+        .comparison-row.header {
+            background: var(--primary-green);
+            color: var(--white);
+        }
+
+        .comparison-row.header .comparison-cell {
+            font-weight: 700;
+            font-size: 13px;
+        }
+
+        .comparison-cell.highlight {
+            background: var(--light-green);
+        }
+
+        .check {
+            color: var(--primary-green);
+            font-size: 20px;
+        }
+
+        .cross {
+            color: var(--text-light);
+            font-size: 16px;
+        }
+
+        /* Timeline Section */
+        .timeline-section {
+            padding: 80px 40px;
+            background: var(--white);
+        }
+
+        .timeline-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .timeline {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 30px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(180deg, var(--light-green) 0%, var(--primary-green) 100%);
+        }
+
+        .timeline-item {
+            padding-left: 80px;
+            padding-bottom: 50px;
+            position: relative;
+        }
+
+        .timeline-item:last-child {
+            padding-bottom: 0;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 18px;
+            top: 5px;
+            width: 28px;
+            height: 28px;
+            background: var(--primary-green);
+            border-radius: 50%;
+            border: 4px solid var(--light-green);
+        }
+
+        .timeline-item h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--primary-green);
+        }
+
+        .timeline-item h4 {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .timeline-item p {
+            color: var(--text-gray);
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        /* Ingredients Deep Dive */
+        .ingredients-section {
+            padding: 80px 40px;
+            background: linear-gradient(180deg, var(--bg-cream) 0%, var(--white) 100%);
+        }
+
+        .ingredients-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .ingredients-subtitle {
+            text-align: center;
+            color: var(--text-gray);
+            font-size: 18px;
+            margin-bottom: 50px;
+        }
+
+        .ingredients-grid {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            gap: 20px;
+        }
+
+        .ingredient-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .ingredient-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 25px 30px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .ingredient-header:hover {
+            background: var(--bg-light);
+        }
+
+        .ingredient-header-left {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .ingredient-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--light-green);
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+
+        .ingredient-name {
+            font-weight: 700;
+            font-size: 18px;
+            margin-bottom: 4px;
+        }
+
+        .ingredient-benefit {
+            font-size: 14px;
+            color: var(--text-gray);
+        }
+
+        .ingredient-toggle {
+            font-size: 28px;
+            color: var(--primary-green);
+            transition: transform 0.3s;
+        }
+
+        .ingredient-card.open .ingredient-toggle {
+            transform: rotate(45deg);
+        }
+
+        .ingredient-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+
+        .ingredient-card.open .ingredient-content {
+            max-height: 500px;
+        }
+
+        .ingredient-inner {
+            padding: 0 30px 30px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .ingredient-image {
+            aspect-ratio: 4/3;
+            background: var(--bg-light);
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-light);
+            font-size: 14px;
+        }
+
+        .ingredient-text {
+            font-size: 14px;
+            line-height: 1.8;
+            color: var(--text-gray);
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            padding: 80px 40px;
+            background: var(--white);
+        }
+
+        .faq-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .faq-question {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 25px 0;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 16px;
+            transition: color 0.2s;
+        }
+
+        .faq-question:hover {
+            color: var(--primary-green);
+        }
+
+        .faq-toggle {
+            font-size: 24px;
+            color: var(--primary-green);
+            transition: transform 0.3s;
+        }
+
+        .faq-item.open .faq-toggle {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+
+        .faq-item.open .faq-answer {
+            max-height: 500px;
+        }
+
+        .faq-answer-inner {
+            padding-bottom: 25px;
+            font-size: 15px;
+            line-height: 1.8;
+            color: var(--text-gray);
+        }
+
+        /* Bibliography */
+        .bibliography-section {
+            padding: 60px 40px;
+            background: var(--bg-cream);
+        }
+
+        .bibliography-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .bibliography-list {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 12px;
+            color: var(--text-gray);
+            line-height: 1.8;
+        }
+
+        .bibliography-list p {
+            margin-bottom: 10px;
+        }
+
+        /* Commitment Section */
+        .commitment-section {
+            padding: 60px 40px;
+            background: var(--white);
+        }
+
+        .commitment-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .commitment-grid {
+            max-width: 900px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+
+        .commitment-item {
+            text-align: center;
+        }
+
+        .commitment-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--light-green);
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+        }
+
+        .commitment-item h4 {
+            font-weight: 700;
+            font-size: 16px;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--text-dark);
+            color: var(--white);
+            padding: 60px 40px 30px;
+        }
+
+        .footer-top {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 50px;
+        }
+
+        .footer-brand h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .footer-tagline {
+            color: var(--primary-green);
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .footer-email {
+            color: rgba(255,255,255,0.7);
+        }
+
+        .footer-column h4 {
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .footer-column a {
+            display: block;
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            font-size: 14px;
+            margin-bottom: 12px;
+            transition: color 0.2s;
+        }
+
+        .footer-column a:hover {
+            color: var(--white);
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-copy {
+            font-size: 13px;
+            color: rgba(255,255,255,0.5);
+        }
+
+        .payment-methods {
+            display: flex;
+            gap: 10px;
+        }
+
+        .payment-icon {
+            width: 40px;
+            height: 25px;
+            background: var(--white);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            color: var(--text-dark);
+            font-weight: 700;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .product-section {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .product-gallery {
+                position: static;
+            }
+
+            .footer-top {
+                grid-template-columns: 1fr 1fr;
+                gap: 40px;
+            }
+
+            .reviews-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                padding: 15px 20px;
+            }
+
+            .nav {
+                display: none;
+            }
+
+            .product-section {
+                padding: 20px;
+            }
+
+            .product-title {
+                font-size: 28px;
+            }
+
+            .howto-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .comparison-row {
+                font-size: 12px;
+            }
+
+            .bundle-upsell-container {
+                grid-template-columns: 1fr;
+            }
+
+            .commitment-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .footer-top {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+            }
+
+            .reviews-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Banner -->
+    <div class="top-banner">
+        <span>🚚 FREE SHIPPING on all USA orders over $100</span>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <a href="#" class="logo">Revitalize <span>Wellness</span></a>
+        <nav class="nav">
+            <a href="#">Products</a>
+            <a href="#">Health Goals</a>
+            <a href="#">Rewards</a>
+            <a href="#">Referral</a>
+            <a href="#">Learn</a>
+        </nav>
+        <div class="header-icons">
+            <a href="#" class="cart-btn">🛒 Cart 0</a>
+        </div>
+    </header>
+
+    <!-- Main Product Section -->
+    <main class="product-section">
+        <!-- Product Gallery -->
+        <div class="product-gallery">
+            <div class="main-image">
+                <div class="product-placeholder"></div>
+            </div>
+            <div class="thumbnail-row">
+                <div class="thumbnail active">1</div>
+                <div class="thumbnail">2</div>
+                <div class="thumbnail">3</div>
+                <div class="thumbnail">4</div>
+                <div class="thumbnail">5</div>
+                <div class="thumbnail">6</div>
+            </div>
+        </div>
+
+        <!-- Product Info -->
+        <div class="product-info">
+            <div class="star-rating">
+                <span class="stars">★★★★★</span>
+                <span class="rating-text">4.8 from 500+ reviews</span>
+            </div>
+
+            <h1 class="product-title">Liposomal Vitamin C</h1>
+            <p class="product-tagline">Gentle on the stomach. Fast-absorbing. No soy, no alcohol, no fillers.</p>
+
+            <div class="benefits-list">
+                <div class="benefit-item">
+                    <span class="benefit-check">✅</span>
+                    <span>Supports your body's natural <strong>immune response</strong></span>
+                </div>
+                <div class="benefit-item">
+                    <span class="benefit-check">✅</span>
+                    <span>Easier on <strong>sensitive stomachs</strong> than standard Vitamin C</span>
+                </div>
+                <div class="benefit-item">
+                    <span class="benefit-check">✅</span>
+                    <span><strong>No soy, no alcohol, no additives</strong> — pure and clean</span>
+                </div>
+            </div>
+
+            <div class="product-description">
+                Each dose is wrapped in a <strong>phospholipid layer</strong> that protects it through digestion, so your stomach isn't doing all the work. Gentle enough for everyday use, powerful enough for the whole family.
+            </div>
+
+            <blockquote class="hero-review">
+                "I can't brag about this vitamin C enough. It has kept us healthy for a year almost! And if we start feeling under the weather, we take extra and that seems to do it."
+                <cite>— Vanessa F.</cite>
+            </blockquote>
+
+            <!-- Size Selector -->
+            <div class="size-section">
+                <p class="size-label">Size:</p>
+                <div class="size-options">
+                    <div class="size-option active">30 Servings</div>
+                </div>
+            </div>
+
+            <!-- Price Section -->
+            <div class="price-section">
+                <div class="price-main">
+                    <span class="price-current">$39.99</span>
+                </div>
+                <div class="price-per-dose">
+                    <strong>30</strong> Servings &nbsp;|&nbsp; <strong>$1.33</strong> per serving
+                </div>
+            </div>
+
+            <!-- Bundle Options -->
+            <div class="bundle-options">
+                <div class="bundle-option active">
+                    <div class="bundle-left">
+                        <div class="bundle-radio"></div>
+                        <div>
+                            <div class="bundle-label">Starter</div>
+                            <div class="bundle-desc">1 Liposomal Vitamin C</div>
+                        </div>
+                    </div>
+                    <div class="bundle-right">
+                        <div class="bundle-price">$39.99</div>
+                    </div>
+                </div>
+                <div class="bundle-option bestseller">
+                    <span class="bestseller-badge">Most Popular</span>
+                    <div class="bundle-left">
+                        <div class="bundle-radio"></div>
+                        <div>
+                            <div class="bundle-label">Charge Up</div>
+                            <div class="bundle-desc">1 Liposomal Vitamin C + 1 Methylated B-Complex Powder</div>
+                        </div>
+                    </div>
+                    <div class="bundle-right">
+                        <div class="bundle-price">$67.98</div>
+                        <div class="bundle-original">$74.98</div>
+                        <div class="bundle-discount">Save 20% on B-Complex</div>
+                    </div>
+                </div>
+                <div class="bundle-option">
+                    <div class="bundle-left">
+                        <div class="bundle-radio"></div>
+                        <div>
+                            <div class="bundle-label">Accelerate</div>
+                            <div class="bundle-desc">1 Liposomal Vitamin C + 1 B-Complex + 1 Mag Defense Powder</div>
+                        </div>
+                    </div>
+                    <div class="bundle-right">
+                        <div class="bundle-price">$84.07</div>
+                        <div class="bundle-original">$102.97</div>
+                        <div class="bundle-discount">Save 30% on B-Complex & Mag</div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="add-to-cart">Add to Cart</button>
+
+            <p class="shipping-info">🚚 <strong>Fast Express Shipping</strong> &nbsp;|&nbsp; ✓ <strong>90-Day Money-Back Guarantee</strong></p>
+            <p class="product-meta">30 servings per bottle · 1 tbsp (15ml) daily · No refrigeration required for packets</p>
+
+            <!-- Accordion Sections -->
+            <div class="accordion-section">
+                <div class="accordion-item open">
+                    <div class="accordion-header">
+                        <span>❓ Is This For Me?</span>
+                        <span class="accordion-icon">+</span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-inner">
+                            <p><strong>Liposomal Vitamin C is ideal for you if:</strong></p>
+                            <ul>
+                                <li>You want <strong>stronger immune support</strong> every day</li>
+                                <li>Standard Vitamin C leaves you feeling <strong>bloated or acidic</strong></li>
+                                <li>You suffer from <strong>seasonal allergy symptoms</strong></li>
+                                <li>You experience <strong>midday energy slumps</strong></li>
+                                <li>You want a supplement that is <strong>free from soy, alcohol, and additives</strong></li>
+                                <li>You're looking for a <strong>clean, family-friendly</strong> daily vitamin</li>
+                                <li>You want <strong>faster absorption</strong> than standard Vitamin C</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>❇️ What's Inside Every Bottle</span>
+                        <span class="accordion-icon">+</span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-inner">
+                            <p>Liposomal Vitamin C is formulated with <strong>100% pure, naturally sourced ingredients</strong>.</p>
+                            <p><strong>Contains:</strong></p>
+                            <ul>
+                                <li><strong>1,000mg Vitamin C</strong> (as Sodium Ascorbate) per serving</li>
+                                <li><strong>Liposomal delivery</strong> via sunflower lecithin — soy-free, alcohol-free, non-GMO</li>
+                                <li><strong>No artificial additives</strong>, no preservatives</li>
+                                <li>Also available in <strong>single-serving packets</strong> — no measuring, no refrigeration needed</li>
+                            </ul>
+                            <p style="margin-top: 12px; font-size: 13px; color: var(--text-light);">Verify exact ingredients against current supplement facts label before use.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>😋 Taste & How to Take It</span>
+                        <span class="accordion-icon">+</span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-inner">
+                            <p>Mild citrus flavor. Most people take it <strong>straight or mixed into juice</strong>. The single-serving packets have a naturally sweet tangerine flavor.</p>
+                            <ul>
+                                <li>Take <strong>1 tablespoon (15ml) daily</strong></li>
+                                <li>Drink directly, or <strong>mix into water, juice, or your favorite beverage</strong></li>
+                                <li>During cold and allergy season, many customers take <strong>an extra serving</strong> for added support</li>
+                                <li>Packets require <strong>no refrigeration</strong> — toss one in your bag or lunchbox</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>✅ Clean Label</span>
+                        <span class="accordion-icon">+</span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-inner">
+                            <p>Liposomal Vitamin C is free from:</p>
+                            <ul>
+                                <li><strong>Non-GMO</strong></li>
+                                <li><strong>Soy-free</strong> (uses sunflower lecithin)</li>
+                                <li><strong>Alcohol-free</strong></li>
+                                <li><strong>Gluten-free</strong></li>
+                                <li><strong>No artificial additives or preservatives</strong></li>
+                                <li><strong>Corn-free</strong></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>📚 Suggested Use</span>
+                        <span class="accordion-icon">+</span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-inner">
+                            <ul>
+                                <li>Take <strong>1 tablespoon (15ml) daily</strong>, or as directed by your healthcare provider</li>
+                                <li>Can be taken <strong>straight or mixed</strong> into juice or water</li>
+                                <li>Pairs well with other daily supplements</li>
+                                <li><strong>Refrigerate after opening</strong> for best freshness; unopened bottles store at room temperature</li>
+                                <li>Many parents give this to their children — <strong>consult your pediatrician</strong> for dosage guidance for young children</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>ℹ️ Supplement Facts</span>
+                        <span class="accordion-icon">+</span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-inner">
+                            <table style="width: 100%; border-collapse: collapse; font-size: 14px;">
+                                <tr style="background: #f5f5f5;">
+                                    <th style="padding: 12px; text-align: left; border-bottom: 1px solid #ddd;">Supplement Facts</th>
+                                    <th style="padding: 12px; text-align: center; border-bottom: 1px solid #ddd;">Per Serving (15ml)</th>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border-bottom: 1px solid #eee;">Serving Size</td>
+                                    <td style="padding: 10px; text-align: center; border-bottom: 1px solid #eee;">1 Tablespoon (15ml)</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border-bottom: 1px solid #eee;">Servings Per Container</td>
+                                    <td style="padding: 10px; text-align: center; border-bottom: 1px solid #eee;">30</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border-bottom: 1px solid #eee;">Vitamin C (as Sodium Ascorbate)</td>
+                                    <td style="padding: 10px; text-align: center; border-bottom: 1px solid #eee;">1,000mg</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border-bottom: 1px solid #eee;">Liposomal Delivery (Sunflower Lecithin)</td>
+                                    <td style="padding: 10px; text-align: center; border-bottom: 1px solid #eee;">Included</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px;">Other Ingredients</td>
+                                    <td style="padding: 10px; text-align: center;">None — no additives, no preservatives</td>
+                                </tr>
+                            </table>
+                            <p style="margin-top: 12px; font-size: 13px; color: var(--text-light);">Verify exact ingredients against current supplement facts label before use.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Attributes Strip -->
+    <div class="attributes-strip">
+        <div class="attributes-scroll">
+            <div class="attribute-item"><span class="attribute-icon">✓</span> Non-GMO</div>
+            <div class="attribute-item"><span class="attribute-icon">✓</span> Alcohol-Free</div>
+            <div class="attribute-item"><span class="attribute-icon">✓</span> Soy-Free</div>
+            <div class="attribute-item"><span class="attribute-icon">✓</span> No Additives</div>
+            <div class="attribute-item"><span class="attribute-icon">✓</span> Supports Collagen Production</div>
+            <div class="attribute-item"><span class="attribute-icon">✓</span> Healthy Gut Tissues</div>
+            <div class="attribute-item"><span class="attribute-icon">✓</span> Balanced Microbiome</div>
+            <div class="attribute-item"><span class="attribute-icon">✓</span> Non-GMO</div>
+            <div class="attribute-item"><span class="attribute-icon">✓</span> Alcohol-Free</div>
+            <div class="attribute-item"><span class="attribute-icon">✓</span> Soy-Free</div>
+            <div class="attribute-item"><span class="attribute-icon">✓</span> No Additives</div>
+            <div class="attribute-item"><span class="attribute-icon">✓</span> Supports Collagen Production</div>
+        </div>
+    </div>
+
+    <!-- Customer Reviews Section -->
+    <section class="endorsement-section">
+        <h2 class="section-title">Real Stories From Our Customers</h2>
+        <p class="section-subtitle">★★★★★ 4.8 from 500+ reviews</p>
+        <div class="reviews-grid">
+            <div class="review-card">
+                <div class="review-stars">★★★★★</div>
+                <p class="review-text">"We absolutely LOVE RW lipo C! It tastes much better than the packets we were purchasing before and I can feel a significant difference in my body when I began using this brand."</p>
+                <span class="review-author">— Lisa P.</span>
+            </div>
+            <div class="review-card">
+                <div class="review-stars">★★★★★</div>
+                <p class="review-text">"I have been using this about a week. I take 15ml each day. What I did not expect was a rise in my energy. I was pleased that I felt it was supporting my immune system."</p>
+                <span class="review-author">— Jillian M.</span>
+            </div>
+            <div class="review-card">
+                <div class="review-stars">★★★★★</div>
+                <p class="review-text">"My 3 year old son asks for this everyday. It's the best liposomal C."</p>
+                <span class="review-author">— X. S.</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="results-section">
+        <h2 class="results-title">LIPOSOMAL VITAMIN C — BY THE NUMBERS</h2>
+        <div class="results-grid">
+            <div class="result-card">
+                <div class="result-icon">⚡</div>
+                <div class="result-number">50%</div>
+                <p class="result-text">faster absorption into the bloodstream vs. standard Vitamin C [13]</p>
+            </div>
+            <div class="result-card">
+                <div class="result-icon">🛡️</div>
+                <div class="result-number">500+</div>
+                <p class="result-text">five-star reviews from families using Liposomal Vitamin C daily</p>
+            </div>
+        </div>
+        <p class="results-note">*Based on published clinical research [13] and verified customer reviews. Individual results may vary. This product is not intended to diagnose, treat, cure, or prevent any disease.</p>
+    </section>
+
+    <!-- Bundle Upsell Section -->
+    <section class="bundle-upsell-section">
+        <div class="bundle-upsell-container">
+            <div class="bundle-upsell-image">
+                <div class="bundle-kit-placeholder">Liposomal Vitamin C + Methylated B-Complex</div>
+            </div>
+            <div class="bundle-upsell-info">
+                <h2>Want Immune Support <em>and</em> All-Day Energy?</h2>
+                <p>Pair Liposomal Vitamin C with Methylated B-Complex Powder. Vitamin C covers immune defense and antioxidant protection — B-Complex fills the gap with steady cellular energy, mood support, and MTHFR-friendly methylated B12 and B9.</p>
+                <div class="bundle-upsell-discount">Save 20%</div>
+                <ul class="bundle-upsell-list">
+                    <li><span class="check-green">✓</span> <strong>Morning:</strong> Take Liposomal Vitamin C</li>
+                    <li><span class="check-green">✓</span> <strong>Daily or Evening:</strong> Mix Methylated B-Complex into water or a drink</li>
+                    <li><span class="check-green">✓</span> <strong>Energy that lasts</strong> — no crash, no spike</li>
+                    <li><span class="check-green">✓</span> <strong>MTHFR-friendly</strong> — safe for the whole family</li>
+                    <li><span class="check-green">✓</span> <strong>Complete daily coverage</strong> — immune + energy + neurological health</li>
+                </ul>
+                <a href="#" class="kit-cta">ADD METHYLATED B-COMPLEX →</a>
+                <p class="kit-note">Bundle pricing applied automatically at checkout.<br>90-Day Money-Back Guarantee on all orders.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Take Section -->
+    <section class="howto-section">
+        <h2 class="howto-title">How to Take Liposomal Vitamin C</h2>
+        <div class="howto-grid">
+            <div class="howto-item">
+                <div class="howto-icon">📦</div>
+                <h4>Tear Open the Packet</h4>
+                <p>Or measure 1 tablespoon from the bottle</p>
+            </div>
+            <div class="howto-item">
+                <div class="howto-icon">🥤</div>
+                <h4>Drink It Straight</h4>
+                <p>Mild citrus or tangerine flavor — no mixing needed</p>
+            </div>
+            <div class="howto-item">
+                <div class="howto-icon">💧</div>
+                <h4>Or Mix With Water</h4>
+                <p>Stir into juice, water, or your favorite beverage</p>
+            </div>
+            <div class="howto-item">
+                <div class="howto-icon">📅</div>
+                <h4>Take Daily</h4>
+                <p>Once a day, any time — consistency is key</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section class="comparison-section">
+        <h2 class="comparison-title">More Than Just Vitamin C</h2>
+        <div class="comparison-table">
+            <div class="comparison-row header">
+                <div class="comparison-cell"></div>
+                <div class="comparison-cell">Liposomal Vitamin C</div>
+                <div class="comparison-cell">Standard Vitamin C</div>
+                <div class="comparison-cell">Vitamin C Capsules</div>
+            </div>
+            <div class="comparison-row">
+                <div class="comparison-cell">Format</div>
+                <div class="comparison-cell highlight">Liquid / Packet</div>
+                <div class="comparison-cell">Powder</div>
+                <div class="comparison-cell">Capsule</div>
+            </div>
+            <div class="comparison-row">
+                <div class="comparison-cell">Liposomal Delivery</div>
+                <div class="comparison-cell highlight"><span class="check">✓</span></div>
+                <div class="comparison-cell"><span class="cross">—</span></div>
+                <div class="comparison-cell"><span class="cross">—</span></div>
+            </div>
+            <div class="comparison-row">
+                <div class="comparison-cell">50% Higher Bioavailability [13]</div>
+                <div class="comparison-cell highlight"><span class="check">✓</span></div>
+                <div class="comparison-cell"><span class="cross">—</span></div>
+                <div class="comparison-cell"><span class="cross">—</span></div>
+            </div>
+            <div class="comparison-row">
+                <div class="comparison-cell">Gentle on Sensitive Stomachs</div>
+                <div class="comparison-cell highlight"><span class="check">✓</span></div>
+                <div class="comparison-cell"><span class="cross">—</span></div>
+                <div class="comparison-cell"><span class="cross">—</span></div>
+            </div>
+            <div class="comparison-row">
+                <div class="comparison-cell">Soy-Free</div>
+                <div class="comparison-cell highlight"><span class="check">✓</span></div>
+                <div class="comparison-cell"><span class="cross">—</span></div>
+                <div class="comparison-cell"><span class="cross">—</span></div>
+            </div>
+            <div class="comparison-row">
+                <div class="comparison-cell">Alcohol-Free</div>
+                <div class="comparison-cell highlight"><span class="check">✓</span></div>
+                <div class="comparison-cell"><span class="cross">—</span></div>
+                <div class="comparison-cell"><span class="cross">—</span></div>
+            </div>
+            <div class="comparison-row">
+                <div class="comparison-cell">No Additives or Preservatives</div>
+                <div class="comparison-cell highlight"><span class="check">✓</span></div>
+                <div class="comparison-cell"><span class="cross">—</span></div>
+                <div class="comparison-cell"><span class="cross">—</span></div>
+            </div>
+            <div class="comparison-row">
+                <div class="comparison-cell">Supports Allergy Relief [13]</div>
+                <div class="comparison-cell highlight"><span class="check">✓</span></div>
+                <div class="comparison-cell"><span class="check">✓</span></div>
+                <div class="comparison-cell"><span class="check">✓</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="timeline-section">
+        <h2 class="timeline-title">What to Expect Week by Week</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <h3>Week 1–2</h3>
+                <h4>Your body starts absorbing what it needs</h4>
+                <p>Your body begins receiving the essential Vitamin C it needs, delivered faster via liposomal technology. Many customers notice they feel more supported day-to-day, especially around seasonal changes.</p>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <h3>Week 3–4</h3>
+                <h4>Smoother days, less discomfort</h4>
+                <p>Continued immune support with more resilience and a smoother daily experience — especially for those who previously felt bloating or discomfort with standard Vitamin C.</p>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <h3>Ongoing</h3>
+                <h4>Steady daily support for the whole family</h4>
+                <p>Consistent immune and antioxidant support, season after season. Natural energy without the crash, and all-day allergy relief when you need it most.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ingredients Deep Dive Section -->
+    <section class="ingredients-section">
+        <h2 class="ingredients-title">It's Not Magic. It's Science.</h2>
+        <p class="ingredients-subtitle">Why does liposomal delivery work so much better?</p>
+        <div class="ingredients-grid">
+            <div class="ingredient-card open">
+                <div class="ingredient-header">
+                    <div class="ingredient-header-left">
+                        <div class="ingredient-icon">🔬</div>
+                        <div>
+                            <div class="ingredient-name">Liposomal Delivery Technology</div>
+                            <div class="ingredient-benefit">50% higher bioavailability than standard Vitamin C [13]</div>
+                        </div>
+                    </div>
+                    <span class="ingredient-toggle">+</span>
+                </div>
+                <div class="ingredient-content">
+                    <div class="ingredient-inner">
+                        <div class="ingredient-image">[Liposome Diagram]</div>
+                        <div class="ingredient-text">
+                            <p>Liposomes are <strong>tiny phospholipid packets</strong> — the same material your cell membranes are made of. Each dose of Vitamin C is wrapped inside these packets, so your body recognizes and absorbs it directly into the bloodstream.</p>
+                            <p style="margin-top: 10px;">Standard Vitamin C must be broken down through the gut first. Liposomal bypasses that process entirely, delivering <strong>more Vitamin C, faster</strong>.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ingredient-card">
+                <div class="ingredient-header">
+                    <div class="ingredient-header-left">
+                        <div class="ingredient-icon">🌻</div>
+                        <div>
+                            <div class="ingredient-name">Sunflower Lecithin</div>
+                            <div class="ingredient-benefit">Soy-free liposomal carrier — clean and effective</div>
+                        </div>
+                    </div>
+                    <span class="ingredient-toggle">+</span>
+                </div>
+                <div class="ingredient-content">
+                    <div class="ingredient-inner">
+                        <div class="ingredient-image">[Sunflower Lecithin Image]</div>
+                        <div class="ingredient-text">
+                            <p>Instead of soy lecithin (the most common liposomal carrier), we use <strong>sunflower lecithin</strong> — making it safe for those with soy sensitivities while delivering the same effective liposomal packaging.</p>
+                            <p style="margin-top: 10px;">Non-GMO, alcohol-free, and completely free from artificial additives.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ingredient-card">
+                <div class="ingredient-header">
+                    <div class="ingredient-header-left">
+                        <div class="ingredient-icon">🍊</div>
+                        <div>
+                            <div class="ingredient-name">Vitamin C (Sodium Ascorbate)</div>
+                            <div class="ingredient-benefit">1,000mg per serving — immune, energy, and antioxidant support</div>
+                        </div>
+                    </div>
+                    <span class="ingredient-toggle">+</span>
+                </div>
+                <div class="ingredient-content">
+                    <div class="ingredient-inner">
+                        <div class="ingredient-image">[Vitamin C Image]</div>
+                        <div class="ingredient-text">
+                            <p>Sodium Ascorbate is a <strong>buffered, gentle form of Vitamin C</strong> that is easier on sensitive stomachs than ascorbic acid, while delivering the same powerful antioxidant, immune, and collagen-supporting benefits.</p>
+                            <p style="margin-top: 10px;">Combined with liposomal delivery, your body gets <strong>more of what you take</strong>, and gets it faster.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <h2 class="faq-title">Frequently Asked Questions</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Why choose Liposomal Vitamin C over other products?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">
+                        <p>Many Vitamin C products on the market contain additives, preservatives, or chemicals that can reduce effectiveness. Liposomal Vitamin C is formulated with <strong>100% pure, naturally sourced ingredients</strong> — free from GMOs, corn, soy, gluten, and alcohol.</p>
+                        <p style="margin-top: 10px;">Beyond the clean label, liposomal technology gives your body <strong>50% higher bioavailability</strong> compared to standard Vitamin C, so you're getting more from every dose. We back it with a 90-day money-back guarantee.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>How do I use Liposomal Vitamin C?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">
+                        <p>Take <strong>1 tablespoon (15ml) daily</strong>. Drink it straight, or mix into juice or water. During cold and allergy season, many customers take an extra serving for added support.</p>
+                        <p style="margin-top: 10px;">The single-serving packets are perfect for travel — just tear open and drink directly. No refrigeration required for unopened packets.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Can I give this to my kids?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">
+                        <p>Many parents do — including us. We recommend consulting your pediatrician for dosage guidance for young children. One of our best-loved reviews: <em>"My 3 year old son asks for this everyday."</em></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Is Liposomal Vitamin C safe?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">
+                        <p>Yes. It's made with 100% pure, naturally sourced ingredients — free from GMOs, soy, gluten, corn, and alcohol. If you are pregnant, breastfeeding, or taking prescription medications, we recommend consulting your healthcare provider before use.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Does it need to be refrigerated?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">
+                        <p>Refrigerate the bottle after opening for best freshness. Unopened bottles can be stored at room temperature. Single-serving packets require no refrigeration at all.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>How soon can I expect my order?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">
+                        <p>We ship fast. Most USA orders arrive within <strong>3–5 business days</strong> with standard shipping. Express shipping options are available at checkout.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>What is your refund policy?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">
+                        <p>We offer a <strong>90-day money-back guarantee</strong>. Try Liposomal Vitamin C for 90 days. If you're not completely satisfied, contact our customer support team for a prompt refund issued as store credit. No questions asked.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Is my payment information safe?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">
+                        <p>Yes. All transactions are processed through <strong>secure, encrypted checkout</strong>. Your payment information is never stored on our servers.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bibliography -->
+    <section class="bibliography-section">
+        <h3 class="bibliography-title">Sources</h3>
+        <div class="bibliography-list">
+            <p>[1] https://www.entofga.com/can-vitamin-c-help-with-allergies/</p>
+            <p>[2] https://www.medicalnewstoday.com/articles/323276</p>
+            <p>[3] https://www.healthline.com/nutrition/vitamin-c-for-allergies</p>
+            <p>[4] https://greatist.com/health/vitamin-c-for-allergies</p>
+            <p>[5] https://www.eatingwell.com/vitamin-c-and-gut-health-8558337</p>
+            <p>[6] https://www.healthline.com/nutrition/increase-iron-absorption</p>
+            <p>[7] https://www.ncbi.nlm.nih.gov/books/NBK448204/</p>
+            <p>[8] https://nutritionsource.hsph.harvard.edu/vitamin-c</p>
+            <p>[9] https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6362257/</p>
+            <p>[10] https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4818067</p>
+            <p>[11] https://www.livestrong.com/article/348175-what-are-the-health-benefits-of-sodium-ascorbate/</p>
+            <p>[12] https://www.healthline.com/health/food-nutrition/phosphatidylcholine</p>
+            <p>[13] https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4915787/</p>
+            <p>[14] https://ncbi.nlm.nih.gov/pmc/articles/PMC9118483/</p>
+            <p>[15] https://lpi.oregonstate.edu/mic/vitamins/vitamin-C/supplemental-forms</p>
+            <p>[16] https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7767325/</p>
+            <p>[17] https://www.news-medical.net/news/20230504/The-effects-of-vitamin-C-vitamin-E-and-ceb2-carotene-on-the-gut-microbiota.aspx</p>
+            <p>[18] https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8389205/</p>
+            <p>[19] https://lpi.oregonstate.edu/mic/health-disease/skin-health/vitamin-C</p>
+            <p>[20] https://www.webmd.com/beauty/ss/slideshow-benefits-of-vitamin-c-for-skin</p>
+            <p>[21] https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8784414/</p>
+            <p>[22] https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7469000/</p>
+            <p>[23] https://www.healthline.com/nutrition/increase-iron-absorption</p>
+            <p>[24] https://lpi.oregonstate.edu/mic/vitamins/vitamin-C</p>
+        </div>
+    </section>
+
+    <!-- Commitment Section -->
+    <section class="commitment-section">
+        <h2 class="commitment-title">Our Commitment to You</h2>
+        <div class="commitment-grid">
+            <div class="commitment-item">
+                <div class="commitment-icon">🔬</div>
+                <h4>Science-backed ingredients with published clinical evidence</h4>
+            </div>
+            <div class="commitment-item">
+                <div class="commitment-icon">🌱</div>
+                <h4>100% pure, naturally sourced — no fillers, no shortcuts</h4>
+            </div>
+            <div class="commitment-item">
+                <div class="commitment-icon">✓</div>
+                <h4>90-Day Money-Back Guarantee. No questions asked.</h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <h3>Revitalize Wellness</h3>
+                <p class="footer-tagline">HEALTH. NUTRITION. LIFESTYLE.</p>
+                <p class="footer-email">support@revitalizewellness.com</p>
+            </div>
+            <div class="footer-column">
+                <h4>Shop</h4>
+                <a href="#">Top Sellers</a>
+                <a href="#">Plain Powders</a>
+                <a href="#">Defense Powders</a>
+                <a href="#">Capsules & Liquids</a>
+            </div>
+            <div class="footer-column">
+                <h4>Help</h4>
+                <a href="#">FAQs</a>
+                <a href="#">About Us</a>
+                <a href="#">Blog</a>
+                <a href="#">Rewards Program</a>
+                <a href="#">Referral Program</a>
+            </div>
+            <div class="footer-column">
+                <h4>Legal</h4>
+                <a href="#">Store & Privacy Policies</a>
+                <a href="#">Refund Policy</a>
+                <a href="#">Shipping Policy</a>
+                <a href="#">Terms and Conditions</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="footer-copy">Copyright © 2026, Revitalize Wellness. All rights reserved.<br><small>These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.</small></p>
+            <div class="payment-methods">
+                <div class="payment-icon">VISA</div>
+                <div class="payment-icon">MC</div>
+                <div class="payment-icon">AMEX</div>
+                <div class="payment-icon">PP</div>
+                <div class="payment-icon">AP</div>
+                <div class="payment-icon">GP</div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Accordion functionality
+        document.querySelectorAll('.accordion-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const item = header.parentElement;
+                item.classList.toggle('open');
+            });
+        });
+
+        // FAQ functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                item.classList.toggle('open');
+            });
+        });
+
+        // Ingredient cards functionality
+        document.querySelectorAll('.ingredient-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const card = header.parentElement;
+                card.classList.toggle('open');
+            });
+        });
+
+        // Bundle option selection
+        document.querySelectorAll('.bundle-option').forEach(option => {
+            option.addEventListener('click', () => {
+                document.querySelectorAll('.bundle-option').forEach(o => o.classList.remove('active'));
+                option.classList.add('active');
+            });
+        });
+
+        // Size option selection
+        document.querySelectorAll('.size-option').forEach(option => {
+            option.addEventListener('click', () => {
+                document.querySelectorAll('.size-option').forEach(o => o.classList.remove('active'));
+                option.classList.add('active');
+            });
+        });
+
+        // Thumbnail selection
+        document.querySelectorAll('.thumbnail').forEach(thumb => {
+            thumb.addEventListener('click', () => {
+                document.querySelectorAll('.thumbnail').forEach(t => t.classList.remove('active'));
+                thumb.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
